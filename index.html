@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mindset 1 Unit 7 – Vocabulary & Grammar</title>
+<style>
+:root{
+  --navy:#1b2a41;
+  --navy2:#28405f;
+  --sand:#f6f3ea;
+  --gold:#c9a227;
+  --good:#1e7d45;
+  --bad:#b3261e;
+  --muted:#6b7280;
+}
+*{box-sizing:border-box;}
+body{margin:0;font-family:'Segoe UI',Arial,sans-serif;background:var(--sand);color:#222;line-height:1.55;}
+header{background:var(--navy);color:#fff;padding:28px 20px;text-align:center;}
+header h1{margin:0 0 6px;font-size:1.8em;}
+header p{margin:0;color:#d7dde6;font-size:.98em;}
+.container{max-width:880px;margin:0 auto;padding:24px 16px 80px;}
+.card{background:#fff;border-radius:12px;padding:22px 24px;margin-bottom:22px;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+.ex-title{color:var(--navy);border-bottom:3px solid var(--gold);display:inline-block;padding-bottom:4px;margin:0 0 10px;font-size:1.25em;}
+.ex-instructions{color:#444;margin:0 0 16px;font-size:.98em;}
+.wordbank{background:#eef2fa;border:1px dashed #9fb3d6;border-radius:10px;padding:12px 16px;margin-bottom:16px;font-size:.95em;}
+.wordbank b{color:var(--navy2);}
+.q{margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid #eee;}
+.q:last-child{border-bottom:none;}
+.q-num{font-weight:700;color:var(--navy2);margin-right:4px;}
+select, .blank-input{padding:6px 8px;border:1px solid #c6cedb;border-radius:6px;font-size:.96em;font-family:inherit;}
+.blank-input{min-width:150px;}
+.opts label{display:block;margin:4px 0;cursor:pointer;}
+.feedback{margin-left:8px;font-weight:600;}
+.feedback.correct{color:var(--good);}
+.feedback.wrong{color:var(--bad);}
+.correct-answer{font-weight:500;color:var(--bad);font-style:italic;}
+.example-tag{font-size:.85em;color:var(--muted);font-style:italic;}
+.submit-bar{position:sticky;bottom:0;background:var(--sand);padding:14px 0;text-align:center;border-top:1px solid #ddd;}
+button{background:var(--navy);color:#fff;border:none;padding:12px 26px;border-radius:30px;font-size:1em;cursor:pointer;margin:0 6px;}
+button.secondary{background:#fff;color:var(--navy);border:1px solid var(--navy);}
+.score-card{display:none;background:var(--navy);color:#fff;border-radius:12px;padding:20px;text-align:center;margin-bottom:22px;}
+.score-card h2{margin:0 0 6px;}
+.score-num{font-size:2em;font-weight:700;color:var(--gold);}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Mindset 1 Unit 7 – Vocabulary & Grammar</h1>
+  <p>Fame and the Media: describing celebrities, the media, idioms, and first conditional</p>
+</header>
+
+<div class="container">
+
+  <div id="scoreCardTop" class="score-card">
+    <h2>Your Score</h2>
+    <div id="scoreTextTop" class="score-num"></div>
+    <p id="scoreMsgTop"></p>
+  </div>
+
+  <!-- EXERCISE 1 -->
+  <div class="card">
+    <h2 class="ex-title">Exercise 1</h2>
+    <p class="ex-instructions">Complete the descriptions with the words and phrases in the box.</p>
+    <div class="wordbank"><b>Word bank:</b> celebrity, fan, film star, lead singer, paparazzi, reporter, role model, supporter</div>
+    <div id="ex1"></div>
+  </div>
+
+  <!-- EXERCISE 2 -->
+  <div class="card">
+    <h2 class="ex-title">Exercise 2</h2>
+    <p class="ex-instructions">Choose the best words to complete the sentences.</p>
+    <div id="ex2"></div>
+  </div>
+
+  <!-- EXERCISE 3 -->
+  <div class="card">
+    <h2 class="ex-title">Exercise 3</h2>
+    <p class="ex-instructions">Complete the text. Use the words in the box.</p>
+    <div class="wordbank"><b>Word bank:</b> appear, attend, earn, own, passed on, present, recognise, sign, star, take</div>
+    <div id="ex3"></div>
+  </div>
+
+  <!-- EXERCISE 4 -->
+  <div class="card">
+    <h2 class="ex-title">Exercise 4</h2>
+    <p class="ex-instructions">Complete the sentences. Use the words in the box.</p>
+    <div class="wordbank"><b>Word bank:</b> blogs, broadcasting, internet, magazines, media, movies, newspapers, radio, social media, television</div>
+    <div id="ex4"></div>
+  </div>
+
+  <!-- EXERCISE 5 -->
+  <div class="card">
+    <h2 class="ex-title">Exercise 5</h2>
+    <p class="ex-instructions">Read the information. Then complete the sentences. Use the idioms in the box.</p>
+    <div class="wordbank"><i>An idiom is a group of words in a fixed order which has its own meaning. Even when you know the meaning of each of the words in an idiom, you will need to learn the meaning of the whole idiom.</i></div>
+    <div class="wordbank"><b>Word bank:</b> are in the public eye, claim to fame, make it big, paying the price, rising star, victim of her own success</div>
+    <div id="ex5"></div>
+  </div>
+
+  <!-- EXERCISE 6 -->
+  <div class="card">
+    <h2 class="ex-title">Exercise 6</h2>
+    <p class="ex-instructions">Match the sentence endings with the correct beginnings.</p>
+    <div id="ex6"></div>
+  </div>
+
+  <!-- EXERCISE 7 -->
+  <div class="card">
+    <h2 class="ex-title">Exercise 7</h2>
+    <p class="ex-instructions">Correct the first conditional sentences by changing the incorrect use of <i>will</i>. Use contractions where possible. The first one has been done for you.</p>
+    <div id="ex7"></div>
+  </div>
+
+  <div class="submit-bar">
+    <button onclick="gradeAll()">✅ Check my answers</button>
+    <button class="secondary" onclick="resetAll()">↺ Reset</button>
+  </div>
+
+  <div id="scoreCard" class="score-card">
+    <h2>Your Score</h2>
+    <div id="scoreText" class="score-num"></div>
+    <p id="scoreMsg"></p>
+  </div>
+
+</div>
+
+<script>
+/* ---------- ANSWER KEY ---------- */
+const KEY = {
+  ex1: ["celebrity","film star","lead singer","fan","role model","supporter","reporter","paparazzi"],
+  ex2: ["well-known","handsome","beautiful","popular","wealthy","talented","fashionable","stylish"],
+  ex3: ["present","star","earn","own","appear","attend","recognise","sign","passed on","take"],
+  ex4: ["media","newspapers","magazines","movies","broadcasting","radio","television","internet","blogs","social media"],
+  ex5: ["claim to fame","paying the price","rising star","are in the public eye","victim of her own success","make it big"],
+  ex6: ["they go on tour","do you ask them for an autograph?","their fans won't be happy at all","it'll be the best day of my life","there aren't any tickets?","they keep printing private pictures of celebrities"],
+  ex7: ["I get","I tell","they like","people watch","my videos go","a TV or film producer hears","that happens","nobody follows","I don't try"]
+};
+
+function normalize(s){
+  return (s||"").toString().trim().toLowerCase().replace(/[-–—'’\s.?]/g,"");
+}
+function mark(elId, isCorrect, correctText){
+  const el = document.getElementById(elId);
+  if(!el) return;
+  if(isCorrect){ el.innerHTML = "✔"; el.className="feedback correct"; }
+  else { el.innerHTML = `✘ <span class="correct-answer">(answer: ${correctText})</span>`; el.className="feedback wrong"; }
+}
+
+/* ---------- BUILD EXERCISE 1 ---------- */
+const ex1data = [
+  "A ___ is someone who is famous.",
+  "A ___ is a famous movie actor.",
+  "The ___ of a band is the main (and sometimes the only) singer.",
+  "A ___ is someone who really likes a particular person, group or team.",
+  "Your ___ is a person who you like and want to be like.",
+  "A ___ is someone who likes a particular sports team, person or group and wants them to do well.",
+  "A ___ is a person whose job is to find information about news events and describe them for newspapers, TV, etc.",
+  "The ___ are photographers who follow famous people and try to take photos of them."
+];
+const ex1words = ["celebrity","fan","film star","lead singer","paparazzi","reporter","role model","supporter"];
+document.getElementById('ex1').innerHTML = ex1data.map((t,i)=>`
+  <div class="q"><span class="q-num">${i+1}.</span> ${t.replace('___', `<select id="ex1-${i}"><option value="">-- choose --</option>${ex1words.map(w=>`<option value="${w}">${w}</option>`).join('')}</select>`)}
+  <span class="feedback" id="ex1-fb-${i}"></span></div>
+`).join('');
+
+/* ---------- BUILD EXERCISE 2 ---------- */
+const ex2data = [
+  {t:"Everybody knows his name. He's really ___.", opts:["talented","well-known","rich"]},
+  {t:"He's a really good-looking actor. He's so ___.", opts:["popular","handsome","famous"]},
+  {t:"She's very attractive. She's such a ___ woman.", opts:["beautiful","talented","well-known"]},
+  {t:"Everybody loves that band. They're really ___ at the moment.", opts:["attractive","pretty","popular"]},
+  {t:"She's got lots of money. She's extremely ___.", opts:["popular","well-known","wealthy"]},
+  {t:"He can do amazing things that other people find difficult. He's so ___.", opts:["talented","stylish","attractive"]},
+  {t:"Her clothes are always really cool. She's very ___.", opts:["fashionable","handsome","famous"]},
+  {t:"They wear beautiful clothes. They look very ___.", opts:["rich","stylish","talented"]}
+];
+document.getElementById('ex2').innerHTML = ex2data.map((it,i)=>`
+  <div class="q"><span class="q-num">${i+1}.</span> ${it.t.replace('___', `<select id="ex2-${i}"><option value="">--</option>${it.opts.map(o=>`<option value="${o}">${o}</option>`).join('')}</select>`)}
+  <span class="feedback" id="ex2-fb-${i}"></span></div>
+`).join('');
+
+/* ---------- BUILD EXERCISE 3 ---------- */
+const ex3words = ["appear","attend","earn","own","passed on","present","recognise","sign","star","take"];
+function sel3(id){
+  return `<select id="${id}"><option value="">--</option>${ex3words.map(w=>`<option value="${w}">${w}</option>`).join('')}</select><span class="feedback" id="${id}-fb"></span>`;
+}
+document.getElementById('ex3').innerHTML = `<p>
+I'm going to be famous when I'm older. I'm going to ${sel3('ex3-0')} a TV programme about films. Later, they'll ask me to ${sel3('ex3-1')} in films and I'll have my name in big letters on movie posters. I'll ${sel3('ex3-2')} a fortune for every film I make and I'll be incredibly rich. I'll also ${sel3('ex3-3')} a luxury yacht and perhaps I'll have my own private island. My photo will <u>appear</u> <span class="example-tag">(example)</span> on the cover of lots of magazines. I'll ${sel3('ex3-4')} film premieres (and see movies before anyone else), where I'll wear stylish clothes. Of course, it won't be so nice if thousands of people ${sel3('ex3-5')} me in the street. I don't really want to ${sel3('ex3-6')} hundreds of autographs every day. It'd be horrible if newspapers and magazines ${sel3('ex3-7')} rumours and gossip about my private life. I also don't think I'd like to ${sel3('ex3-8')} part in lots of boring interviews and press conferences. Maybe being famous wouldn't be so nice after all.</p>`;
+for(let i=0;i<9;i++){ document.getElementById(`ex3-${i}-fb`).id = `ex3-fb-${i}`; }
+
+/* ---------- BUILD EXERCISE 4 ---------- */
+const ex4words = ["blogs","broadcasting","internet","magazines","media","movies","newspapers","radio","social media","television"];
+function sel4(id){
+  return `<select id="${id}"><option value="">--</option>${ex4words.map(w=>`<option value="${w}">${w}</option>`).join('')}</select><span class="feedback" id="${id}-fb"></span>`;
+}
+const ex4data = [
+  `The ${sel4('ex4-0')} is the general name for the group which includes the Internet, newspapers, magazines, television, etc.`,
+  `One of the oldest branches of the media is ${sel4('ex4-1')}. They are written by journalists and then printed on printing presses or can be read online.`,
+  `${sel4('ex4-2')} are similar to newspapers, but they're generally more colorful and entertaining. They are usually weekly or monthly.`,
+  `Films became popular around the beginning of the 20th century, when people visited cinemas to watch moving pictures (or ${sel4('ex4-3')}) for the first time.`,
+  `The 20th century was the age of ${sel4('ex4-4')} — sending programs to lots of people at the same time, using, for example, television or radio.`,
+  `${sel4('ex4-5')} was the first way of broadcasting spoken words and music, and it continues to be popular today.`,
+  `In the middle of the 20th century, as ${sel4('ex4-6')} sets became cheaper, TV took over from radio as the most popular form of broadcast media.`,
+  `At the end of the 20th century, the ${sel4('ex4-7')} added a new way of providing traditional media, such as news, music and films.`,
+  `However, in the early 21st century, millions of ordinary people started creating their own online 'newspaper', where they reported whatever they found interesting in their web logs (later shortened to ${sel4('ex4-8')}).`,
+  `Later, thanks to ${sel4('ex4-9')} sites like YouTube, Facebook and Twitter, everybody could broadcast everything to the world, instantly.`
+];
+document.getElementById('ex4').innerHTML = ex4data.map((t,i)=>`<div class="q"><span class="q-num">${i+1}.</span> ${t}</div>`).join('');
+for(let i=0;i<10;i++){ document.getElementById(`ex4-${i}-fb`).id = `ex4-fb-${i}`; }
+
+/* ---------- BUILD EXERCISE 5 ---------- */
+const ex5data = [
+  "I don't know why she's famous. Her only ___ is that her dad was a famous singer.",
+  "I don't feel too sorry for celebrities who complain about the paparazzi. They're just ___ for being famous.",
+  "This singer isn't famous yet, but she's been on TV a few times, so she's definitely a ___ — I'm sure everyone will know her name this time next year.",
+  "I think all people who ___ should be very careful about what they say and do in public — many people look up to them and copy their actions.",
+  "She was a great songwriter before she was famous, when she was poor and angry. But now she's rich and happy, she's got nothing to write about! She's a ___.",
+  "It's very difficult to ___ in the music business. Many people try, but only a small number succeed."
+];
+const ex5words = ["are in the public eye","claim to fame","make it big","paying the price","rising star","victim of her own success"];
+document.getElementById('ex5').innerHTML = ex5data.map((t,i)=>`
+  <div class="q"><span class="q-num">${i+1}.</span> ${t.replace('___', `<select id="ex5-${i}"><option value="">-- choose --</option>${ex5words.map(w=>`<option value="${w}">${w}</option>`).join('')}</select>`)}
+  <span class="feedback" id="ex5-fb-${i}"></span></div>
+`).join('');
+
+/* ---------- BUILD EXERCISE 6 ---------- */
+const ex6data = [
+  "I'll definitely go and see them in concert if ___",
+  "If you see famous people, ___",
+  "If the lead singer leaves the band, ___",
+  "I'm going to see my idol next week! ___",
+  "What will you do if ___",
+  "I won't buy that magazine again if ___"
+];
+const ex6words = ["It'll be the best day of my life.","do you ask them for an autograph?","their fans won't be happy at all.","there aren't any tickets?","they go on tour.","they keep printing private pictures of celebrities."];
+document.getElementById('ex6').innerHTML = ex6data.map((t,i)=>`
+  <div class="q"><span class="q-num">${i+1}.</span> ${t}
+  <select id="ex6-${i}"><option value="">-- choose ending --</option>${ex6words.map(w=>`<option value="${w.replace(/\.$|\?$/,'')}">${w}</option>`).join('')}</select>
+  <span class="feedback" id="ex6-fb-${i}"></span></div>
+`).join('');
+
+/* ---------- BUILD EXERCISE 7 ---------- */
+const ex7data = [
+  {t:"I'm going to start writing about my life on social media. If <s>it'll be</s> interesting, I'm sure people will want to follow me.", example:"it's"},
+  {t:"If I'll get lots of followers, I'll start my own YouTube channel and make funny videos."},
+  {t:"All my followers will watch my YouTube channel if I'll tell them about my funny videos."},
+  {t:"If they'll like my videos, they'll keep coming back for more."},
+  {t:"If enough people will watch my videos and share the links on social media, they'll go viral — thousands of people all over the world will watch them."},
+  {t:"TV and newspaper reporters will notice if my videos will go viral, and they'll tell even more people about them."},
+  {t:"If a TV or film producer will hear about my videos, he/she will pay me to make professional films or TV programs."},
+  {t:"I'll make a fortune if that'll happen."},
+  {t:"On the other hand, if nobody will follow me on social media, none of those things will happen."},
+  {t:"But if I won't try, I'll never know."}
+];
+document.getElementById('ex7').innerHTML = ex7data.map((it,i)=>{
+  if(i===0){
+    return `<div class="q"><span class="q-num">1.</span> ${it.t} <span class="example-tag">(example — correct: "${it.example}")</span></div>`;
+  }
+  return `<div class="q"><span class="q-num">${i+1}.</span> ${it.t}<br>
+  Correction: <input class="blank-input" id="ex7-${i-1}" style="width:220px;">
+  <span class="feedback" id="ex7-fb-${i-1}"></span></div>`;
+}).join('');
+
+/* ---------- GRADING ---------- */
+function gradeAll(){
+  let total=0, scored=0;
+
+  KEY.ex1.forEach((ans,i)=>{
+    const v = document.getElementById(`ex1-${i}`).value;
+    const ok = v===ans;
+    total++; if(ok) scored++;
+    mark(`ex1-fb-${i}`, ok, ans);
+  });
+
+  KEY.ex2.forEach((ans,i)=>{
+    const v = document.getElementById(`ex2-${i}`).value;
+    const ok = v===ans;
+    total++; if(ok) scored++;
+    mark(`ex2-fb-${i}`, ok, ans);
+  });
+
+  KEY.ex3.forEach((ans,i)=>{
+    const v = document.getElementById(`ex3-${i}`).value;
+    const ok = v===ans;
+    total++; if(ok) scored++;
+    mark(`ex3-fb-${i}`, ok, ans);
+  });
+
+  KEY.ex4.forEach((ans,i)=>{
+    const v = document.getElementById(`ex4-${i}`).value;
+    const ok = v===ans;
+    total++; if(ok) scored++;
+    mark(`ex4-fb-${i}`, ok, ans);
+  });
+
+  KEY.ex5.forEach((ans,i)=>{
+    const v = document.getElementById(`ex5-${i}`).value;
+    const ok = v===ans;
+    total++; if(ok) scored++;
+    mark(`ex5-fb-${i}`, ok, ans);
+  });
+
+  KEY.ex6.forEach((ans,i)=>{
+    const v = document.getElementById(`ex6-${i}`).value;
+    const ok = normalize(v)===normalize(ans);
+    total++; if(ok) scored++;
+    mark(`ex6-fb-${i}`, ok, ans);
+  });
+  /* NOTE: ex6 select values strip trailing . or ? while KEY.ex6 keeps punctuation;
+     normalize() strips punctuation/case for both sides, so this still matches correctly. */
+
+  KEY.ex7.forEach((ans,i)=>{
+    const v = document.getElementById(`ex7-${i}`).value;
+    const ok = normalize(v)===normalize(ans);
+    total++; if(ok) scored++;
+    mark(`ex7-fb-${i}`, ok, ans);
+  });
+
+  document.querySelectorAll('#ex1,#ex2,#ex3,#ex4,#ex5,#ex6,#ex7').forEach(sec=>{
+    sec.querySelectorAll('input, select').forEach(el=>{ el.disabled = true; });
+  });
+
+  const pct = Math.round((scored/total)*100);
+  let msg = "";
+  if(pct>=90) msg="Excellent work! 🎉";
+  else if(pct>=70) msg="Good job — review the ones you missed.";
+  else if(pct>=50) msg="Nice try — go back over the vocabulary and try again.";
+  else msg="Keep practicing — review the vocabulary above.";
+
+  document.getElementById('scoreCard').style.display='block';
+  document.getElementById('scoreText').textContent = `${scored} / ${total}`;
+  document.getElementById('scoreMsg').textContent = `${pct}% correct. ${msg}`;
+
+  document.getElementById('scoreCardTop').style.display='block';
+  document.getElementById('scoreTextTop').textContent = `${scored} / ${total}`;
+  document.getElementById('scoreMsgTop').textContent = `${pct}% correct. ${msg}`;
+
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function resetAll(){ location.reload(); }
+</script>
+
+</body>
+</html>
